@@ -24,7 +24,7 @@
         <a class="navbar-brand" href="/">ToDo's App</a>
         <div class="ml-auto">
           <form class="form-inline my-2 my-lg-0">
-            <% if(typeof user=='undefined' ) {%>
+            <% if((typeof user=='undefined' ) || (!user)) {%>
             <a class="btn btn-outline-light my-2 my-sm-0 px-4" href="/login">
               Login
             </a>
@@ -40,11 +40,6 @@
           </form>
         </div>
       </nav>
-      <p class="text-center text-light bg-secondary py-3">
-        Welcome, <%=user.userName%> &nbsp; (<span title="Pending Task(s)"
-          ><%= left %></span
-        >)
-      </p>
     </header>
   </body>
 </html>
