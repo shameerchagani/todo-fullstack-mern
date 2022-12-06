@@ -1,0 +1,20 @@
+<%-include('./partials/header.ejs')  %> 
+    <main class="container my-4">
+    <form action="/todos/createTodo" method="POST">
+        <div class="form-group d-flex">
+            <input type="text" class="form-control" id="todoItem" name="todoItem" placeholder="Enter a Task" autofocus />
+            <button class="btn btn-secondary py-1 px-4">Add</button>
+        </div>
+    
+    <section class="container todo-container">
+        <ul class="shadow-lg m-auto" style="max-width: 36em;">
+            <% todos.forEach( el => { %>
+            <li class='todo-Item text-capitalize shadow-sm' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del float-right align-middle'><i class="fa fa-times" aria-hidden="true"></i></span>
+            </li>
+            <% }) %>
+        </ul>
+    </section>
+</main>
+    <%- include('./partials/footer.ejs') %>

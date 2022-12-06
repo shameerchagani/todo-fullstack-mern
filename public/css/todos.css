@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.completed {
+  text-decoration: line-through;
+  color: lightslategray;
+}
+.del {
+  padding: 5px 8px;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  font-size: 0.9em;
+  color: firebrick;
+}
+ul {
+  list-style: none;
+  background-color: transparent !important;
+  border-radius: 10px;
+}
+ul li {
+  cursor: pointer;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+ul li.todo-item:nth-child(even) {
+  background-color: black !important;
+}
